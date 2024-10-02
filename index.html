@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chemical Supplies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h3>Chemical Supplies</h3>
+            <div class="btn-group">
+                <button class="icon-btn-add" onclick="addRow()">
+                    <i class="bi bi-plus"></i>
+                </button>
+                <button class="icon-btn-down" onclick="moveRowDown()">
+                    <i class="bi bi-arrow-down"></i>
+                </button>
+                <button class="icon-btn-up" onclick="moveRowUp()">
+                    <i class="bi bi-arrow-up"></i>
+                </button>
+                <button class="icon-btn-delete" onclick="deleteRow()">
+                    <i class="bi bi-trash"></i>
+                </button>
+                <button class="icon-btn" onclick="refreshData()">
+                    <i class="bi bi-arrow-clockwise"></i>
+                </button>
+                <button class="icon-btn" onclick="saveData()">
+                    <i class="bi bi-save"></i>
+                </button>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="tick-box"></th>
+                    <th onclick="sortTable('id')">ID</th>
+                    <th onclick="sortTable('chemical_name')">Chemical Name</th>
+                    <th onclick="sortTable('vendor')">Vendor</th>
+                    <th onclick="sortTable('density')">Density <br><small style="color: grey;">(g/m³)</small></th>
+                    <th onclick="sortTable('viscosity')">Viscosity <br><small style="color: grey;">(m²/s)</small></th>
+                    <th onclick="sortTable('packaging')">Packaging</th>
+                    <th onclick="sortTable('pack_size')">Pack Size</th>
+                    <th onclick="sortTable('unit')">Unit</th>
+                    <th onclick="sortTable('quantity')">Quantity</th>
+                </tr>
+            </thead>
+            
+            <tbody id="chemicalTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

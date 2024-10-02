@@ -1,0 +1,112 @@
+
+body{
+    /* padding: 50px; */
+    margin: 50px;
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.icon-btn-add {
+    border-radius: 50%;
+    background-color: blue;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+.icon-btn-add i {
+    font-size: 24px;
+    color: white;
+}
+.icon-btn, .icon-btn-up, .icon-btn-down, .icon-btn-delete {
+    background: none;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+.icon-btn-up, .icon-btn-down, .icon-btn-delete{
+    font-size: 24px;
+}
+.icon-btn-up{
+    color: grey     ;
+}
+.icon-btn-down{
+    color: blue;
+}
+.icon-btn-delete{
+    color: red;
+}
+.icon-btn i {
+    font-size: 24px;
+    color: blue;
+}
+
+.editable {
+    width: 100%;
+}
+.selected-row {
+    background-color: #d0e7ff !important;
+}
+th {
+    cursor: pointer;
+}
+th.sort-asc::after {
+    content: ' \25B2';
+}
+th.sort-desc::after {
+    content: ' \25BC';
+}
+.tick-box {
+    width: 25px;
+    text-align: center;
+}
+.bi-check {
+    font-size: 24px;
+    color: gray;
+}
+.bi-check.selected {
+    color: blue;
+}
+
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .icon-btn, .icon-btn-up, .icon-btn-down, .icon-btn-delete, .icon-btn-add {
+        margin: 5px 0; 
+        font-size: 20px; 
+    }
+
+    th {
+        font-size: 14px; 
+    }
+
+    td {
+        font-size: 12px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .head {
+        margin: 10px; 
+    }
+
+    .icon-btn-add {
+        width: 35px;
+        height: 35px;
+    }
+
+    .icon-btn, .icon-btn-up, .icon-btn-down, .icon-btn-delete {
+        font-size: 18px; 
+    }
+
+    th, td {
+        padding: 5px; 
+    }
+}       
